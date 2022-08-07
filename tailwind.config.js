@@ -1,7 +1,26 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    screens: {
+      ...defaultTheme.screens,
+      xs: '350px',
+      mb: '600px',
+      sm: '960px',
+      md: '1280px',
+      lg: '1920px',
+      xl: '2560px',
+      '2xl': '3840px',
+    },
+    fontFamily: {
+      Thunderstorm: ['Thunderstorm'],
+      Strippy: ['Strippy'],
+      Gumzilla: ['Gumzilla'],
+      'Gumzilla-Shiny': ['Gumzilla Shiny'],
+      'Gumzilla-Slimy': ['Gumzilla Slimy'],
+    },
     fontSize: {
       xs: '0.75rem',
       sm: '0.875rem',
@@ -16,6 +35,15 @@ module.exports = {
     },
     extend: {
       colors: {
+        primary: {
+          main: '#b465a7',
+          dark: '#000000',
+        },
+        secondary: {
+          main: '#25bec4',
+          dark: '#ffffff',
+        },
+        foreground: '#222222',
         gray: {
           100: '#f7fafc',
           200: '#edf2f7',

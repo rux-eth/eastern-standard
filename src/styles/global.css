@@ -1,21 +1,43 @@
 @tailwind base;
 
-a {
-  @apply text-blue-700;
-}
-
-a:hover {
-  @apply border-b-2 border-blue-700;
-}
-
 @tailwind components;
 
 @tailwind utilities;
 
-.content p {
-  @apply my-6;
-}
 
-.content ul {
-  @apply my-6;
+
+@font-face {
+  font-family: "Gumzilla";
+  font-style: normal;
+  src: url("/fonts/Gumzilla.ttf");
+}
+@font-face {
+  font-family: "Gumzilla Shiny";
+  font-style: normal;
+  src: url("/fonts/Gumzilla-Shiny.ttf");
+}
+@font-face {
+  font-family: "Gumzilla Slimy";
+  font-style: normal;
+  src: url("/fonts/Gumzilla-Slimy.ttf");
+}
+@font-face {
+  font-family: "Strippy";
+  font-style: normal;
+  src: url("/fonts/Strippy-Regular.ttf");
+}
+@font-face {
+  font-family: "Thunderstorm";
+  font-style: normal;
+  src: url("/fonts/Thunderstorm.ttf");
+}
+@font-face {
+  font-family: "Chalky Fingers";
+  font-style: normal;
+  src: url("/fonts/ChalkyFingers.ttf");
+}
+@font-face {
+  font-family: "Planina";
+  font-style: normal;
+  src: url("/fonts/Planina-Regular.ttf");
 }
