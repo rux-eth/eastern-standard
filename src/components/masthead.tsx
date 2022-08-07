@@ -18,8 +18,12 @@ const Title: FC = () => {
         width="200px"
         height={'200px'}
       />
-      <p className="pt-2 text-[.7ch] text-white">
-        Content Content Content Content Content
+      <p className="pt-2 font-SF-Pro text-[.7ch] text-white">
+        Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content
       </p>
     </div>
   );
@@ -42,7 +46,12 @@ const Masthead: FC = () => {
         transform: `translateY(-${progress * 20}%)`,
       }}
     >
-      <div className="absolute left-[4%] top-[15%] w-[700px] text-6xl">
+      <div
+        className="absolute left-[4%] top-[15%] w-[700px] text-6xl"
+        style={{
+          transform: `translateY(-${progress * 40}%)`,
+        }}
+      >
         <Title />
       </div>
     </div>
