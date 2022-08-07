@@ -8,10 +8,10 @@ export interface RoadmapItemProps {
 }
 const RoadmapItem: FC<RoadmapItemProps> = ({ title, content }) => {
   return (
-    <div className="flex w-full flex-1">
+    <div className="flex w-full flex-1 flex-col">
       <div className="flex justify-center align-baseline">
         <span
-          className="text-[1.6rem] text-secondary-main"
+          className=" font-SF-Pro text-[1.6rem] text-primary-main"
           style={{
             textTransform: 'uppercase',
           }}
@@ -19,7 +19,7 @@ const RoadmapItem: FC<RoadmapItemProps> = ({ title, content }) => {
           {title}
         </span>
       </div>
-      {content && <span>{content}</span>}
+      <span className="text-white">{content}</span>
     </div>
   );
 };

@@ -4,8 +4,17 @@
 
 @tailwind utilities;
 
-
-
+.container.auto {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+@font-face {
+  font-family: "SF Pro";
+  font-style: normal;
+  src: url("/fonts/SF-Pro-Display-Bold.otf");
+}
 @font-face {
   font-family: "Gumzilla";
   font-style: normal;

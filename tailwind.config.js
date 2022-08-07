@@ -20,6 +20,7 @@ module.exports = {
       Gumzilla: ['Gumzilla'],
       'Gumzilla-Shiny': ['Gumzilla Shiny'],
       'Gumzilla-Slimy': ['Gumzilla Slimy'],
+      'SF-Pro': ['SF Pro'],
     },
     fontSize: {
       xs: '0.75rem',

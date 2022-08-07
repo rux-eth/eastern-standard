@@ -38,7 +38,7 @@ const Layout: FC<LayoutProps> = ({ children, router }) => {
       <Navbar path={router.asPath} />
       {router.asPath === '/' && <Masthead />}
       <div className="h-screen w-screen bg-foreground">
-        <div className="container mx-auto">{children}</div>
+        <div className="auto container">{children}</div>
       </div>
       <Footer />
     </motion.article>
