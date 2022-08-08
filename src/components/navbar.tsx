@@ -5,7 +5,7 @@ import type { FC } from 'react';
 const Navbar: FC<{ path: string }> = () => {
   return (
     <nav
-      className="sticky top-0 left-0 w-screen items-center justify-between bg-black px-2 py-3"
+      className="sticky top-0 left-0 w-screen items-center justify-between bg-black p-3 px-6"
       style={{
         backdropFilter: 'blur(6px) saturate(300%)',
         WebkitBackdropFilter: 'blur(6px) saturate(300%)',
