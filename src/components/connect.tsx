@@ -6,7 +6,7 @@ const Connect: FC = () => {
   const { ens } = useLookupAddress(account);
   return active && account ? (
     <p
-      className="white-comp capped pointer-events-none "
+      className="ess-button capped pointer-events-none "
       style={{
         opacity: '60%',
         color: 'white',
@@ -17,7 +17,7 @@ const Connect: FC = () => {
       {ens ?? account}
     </p>
   ) : (
-    <button className="white-comp capped" onClick={activateBrowserWallet}>
+    <button className="ess-button capped" onClick={activateBrowserWallet}>
       Connect
     </button>
   );

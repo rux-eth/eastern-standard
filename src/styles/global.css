@@ -10,7 +10,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-.white-comp {
+.ess-button {
   color: black;
   text-align: center;
   justify: center;
@@ -28,10 +28,10 @@
   text-decoration: none;
   text-overflow: ellipsis;
 }
-.white-comp:hover {
+.ess-button:hover {
   background: #25bec4;
 }
-.white-comp.capped {
+.ess-button.capped {
   white-space: nowrap;
   text-overflow: ellipsis;
   max-width: 12ch;
