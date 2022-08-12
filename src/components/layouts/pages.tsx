@@ -1,4 +1,3 @@
-import Title from '@src/components/title';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import type { FC, PropsWithChildren } from 'react';
@@ -31,7 +30,6 @@ const Layout: FC<LayoutProps> = ({ children, title }) => {
             <meta property="og:title" content={t} />
           </Head>
         )}
-        {title && <Title>{title}</Title>}
         {children}
       </>
     </motion.article>

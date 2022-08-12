@@ -11,7 +11,7 @@ const RoadmapItem: FC<RoadmapItemProps> = ({ title, content }) => {
     <div className="flex w-full flex-1 flex-col">
       <div className="flex justify-center align-baseline">
         <span
-          className=" font-SF-Pro text-[1.6rem] text-primary-main"
+          className=" font-Strippy text-[1.6rem] text-primary-main"
           style={{
             textTransform: 'uppercase',
           }}

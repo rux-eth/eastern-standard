@@ -1,3 +1,4 @@
+import { useMediaQuery } from '@src/utils/hooks/useMediaQuery';
 import { ScrollContext } from '@src/utils/scrollObserver';
 import Image from 'next/image';
 import type { FC } from 'react';
@@ -33,10 +34,12 @@ const Masthead: FC = () => {
   if (elContainer) {
     progress = Math.min(1, scrollY / elContainer.clientHeight);
   }
-  return (
+  return useMediaQuery(1200) ? (
+    <div></div>
+  ) : (
     <div
       ref={refContainer}
-      className="sticky top-9 -z-10 flex h-screen"
+      className="sticky top-0 -z-10 flex h-screen"
       style={{
         background: 'url(/assets/ESS-bg-wide2.png) center no-repeat',
         backgroundSize: 'cover',
@@ -44,9 +47,9 @@ const Masthead: FC = () => {
       }}
     >
       <div
-        className="absolute left-[4%] top-[7%] w-[700px] text-6xl"
+        className="absolute left-[4%] top-[50%] w-[700px] text-6xl"
         style={{
-          transform: `translateY(-${progress * 40}%)`,
+          transform: `translateY(-${progress * 40 + 50}%)`,
         }}
       >
         <Title />

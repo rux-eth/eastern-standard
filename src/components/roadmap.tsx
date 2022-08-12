@@ -26,20 +26,21 @@ const Roadmap: FC = () => {
   return (
     <div
       id="roadmap"
-      className="space-y-[3.5rem]"
       style={{
         textAlign: 'center',
         alignItems: 'center',
       }}
     >
       <Title>Roadmap</Title>
-      {roadmapItems.map((item) => (
-        <RoadmapItem
-          key={item.title}
-          title={item.title}
-          content={item.content}
-        />
-      ))}
+      <div className="space-y-5">
+        {roadmapItems.map((item) => (
+          <RoadmapItem
+            key={item.title}
+            title={item.title}
+            content={item.content}
+          />
+        ))}
+      </div>
     </div>
   );
 };
