@@ -1,11 +1,17 @@
 import Links from '@src/components/links';
+import { navDrawerAtom } from '@src/store/jotai';
+import { Spin as Hamburger } from 'hamburger-react';
+import { useAtom } from 'jotai';
 import Link from 'next/link';
 import type { FC } from 'react';
 
+import Connect from './connect';
+
 const Navbar: FC<{ path: string }> = () => {
+  const [isNabDrawerOpen, setIsNabDrawerOpen] = useAtom(navDrawerAtom);
   return (
     <nav
-      className="sticky top-0 left-0 w-screen items-center justify-between bg-black p-3 px-6"
+      className="sticky top-0 left-0 w-screen items-center justify-between bg-black px-[2ch] text-5xl"
       style={{
         backdropFilter: 'blur(6px) saturate(300%)',
         WebkitBackdropFilter: 'blur(6px) saturate(300%)',
@@ -22,15 +28,68 @@ const Navbar: FC<{ path: string }> = () => {
               style={{ alignItems: 'center' }}
             >
               <img src="/assets/ESS-white.png" width={'80px'} alt="logo" />
-              <span className="font-Thunderstorm text-5xl text-white">
+              <span className="hidden font-Thunderstorm text-white md:flex">
                 Eastern Standard
+              </span>
+              <span className="font-Thunderstorm text-white md:hidden">
+                ESS
               </span>
             </div>
           </a>
         </Link>
-        <div className="flex items-center space-x-3 font-Strippy text-4xl text-white">
+        <div className="hidden items-center space-x-4 font-Strippy text-[1.2ch] text-white md:flex">
           {Links}
+          <div className="text-[1.1ch]">
+            <Connect />
+          </div>
         </div>
+        <div className="flex items-center space-x-4 text-[0.8ch] md:hidden">
+          <Connect />
+          <Hamburger
+            toggled={isNabDrawerOpen}
+            toggle={setIsNabDrawerOpen}
+            color="white"
+            hideOutline
+          />
+        </div>
+        {/* 
+        <Stack
+                    direction="row"
+                    spacing={1.2}
+                    alignItems="center"
+                    sx={{ [theme.breakpoints.up('md')]: { display: 'none' } }}
+                >
+                    <Button
+                        onClick={!active ? () => activateBrowserWallet() : undefined}
+                        color="primary"
+                        variant="contained"
+                        disabled={active}
+                    >
+                        {active ? (
+                            <Typography
+                                color="primary"
+                                fontFamily="SF Pro Display"
+                                sx={{
+                                    whiteSpace: 'nowrap',
+                                    overflow: 'hidden',
+                                    textOverflow: 'ellipsis',
+                                    maxWidth: '14ch',
+                                }}
+                            >
+                                {ens ?? account}
+                            </Typography>
+                        ) : (
+                            'Connect Wallet'
+                        )}
+                    </Button>
+                    <Hamburger
+                        toggled={isNavDrawerOpen}
+                        toggle={setIsNavDrawerOpen}
+                        color={theme.palette.primary.main}
+                        hideOutline
+                    />
+                </Stack>
+ */}
       </div>
     </nav>
   );

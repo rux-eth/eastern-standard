@@ -8,7 +8,7 @@ interface LinkFormat {
   component: JSX.Element | string;
 }
 const defClass: string =
-  'cursor-pointer fill-[#dddddd] hover:fill-secondary-main text-[#dddddd] hover:text-secondary-main duration-300';
+  'cursor-pointer fill-white hover:fill-secondary-main text-white hover:text-secondary-main duration-300';
 const defStyle = {};
 const allLinks: LinkFormat[] = [
   {
